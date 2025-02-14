@@ -35,10 +35,10 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
 									<th >Nombre</th>
 									<th >Anho</th>
-									<th >Plataforma Id</th>
+									<th >Plataforma</th>
 									<th >Nota</th>
 
                                         <th></th>
@@ -48,10 +48,21 @@
                                     @foreach ($juegos as $juego)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
 										<td >{{ $juego->nombre }}</td>
 										<td >{{ $juego->anho }}</td>
-										<td >{{ $juego->plataforma_id }}</td>
+                                        @if ($juego->plataforma_id == 1) <!--Esto es para que no aparezca con el id de la plataforma si no con el propio nombre-->
+                                        <td>{{"PlayStation 2"}}</td>
+                                    @endif
+                                    @if ($juego->plataforma_id == 2) <!--Esto es para que no aparezca con el id de la plataforma si no con el propio nombre-->
+                                        <td>{{"PlayStation 3"}}</td>
+                                    @endif
+                                    @if ($juego->plataforma_id == 3) <!--Esto es para que no aparezca con el id de la plataforma si no con el propio nombre-->
+                                        <td>{{"PlayStation 4"}}</td>
+                                    @endif
+                                    @if ($juego->plataforma_id == 4) <!--Esto es para que no aparezca con el id de la plataforma si no con el propio nombre-->
+                                        <td>{{"PlayStation 1"}}</td>
+                                    @endif
 										<td >{{ $juego->nota }}</td>
 
                                             <td>
