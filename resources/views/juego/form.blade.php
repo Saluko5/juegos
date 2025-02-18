@@ -12,8 +12,15 @@
             {!! $errors->first('anho', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
-            <label for="plataforma_id" class="form-label">{{ __('Plataforma Id') }}</label>
-            <input type="text" name="plataforma_id" class="form-control @error('plataforma_id') is-invalid @enderror" value="{{ old('plataforma_id', $juego?->plataforma_id) }}" id="plataforma_id" placeholder="Plataforma Id">
+            <label for="plataforma_id" class="form-label">{{ __('Plataforma') }}</label><br>
+            <select name="plataforma_id" id="">
+                <?php
+                for ($i=1; $i < count($consolas)+1; $i++) {
+                    echo "<option value=\"hola\">{{$consolas[$i]}}</option>";
+                }
+                ?>
+            </select>
+            {{-- <input type="text" name="plataforma_id" class="form-control @error('plataforma_id') is-invalid @enderror" value="{{ old('plataforma_id', $juego?->plataforma_id) }}" id="plataforma_id" placeholder="Plataformaaaaaaaaaa"> --}}
             {!! $errors->first('plataforma_id', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">

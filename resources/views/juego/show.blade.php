@@ -23,6 +23,7 @@
                                 <div class="form-group mb-2 mb20">
                                     <strong>Nombre:</strong>
                                     {{ $juego->nombre }}
+
                                 </div>
                                 <div class="form-group mb-2 mb20">
                                     <strong>Anho:</strong>
@@ -30,18 +31,7 @@
                                 </div>
                                 <div class="form-group mb-2 mb20">
                                     <strong>Plataforma:</strong>
-                                    @if ($juego->plataforma_id == 1) <!--Esto es para que no aparezca con el id de la plataforma si no con el propio nombre-->
-                                        {{"PlayStation 2"}}
-                                    @endif
-                                    @if ($juego->plataforma_id == 2) <!--Esto es para que no aparezca con el id de la plataforma si no con el propio nombre-->
-                                        {{"PlayStation 3"}}
-                                    @endif
-                                    @if ($juego->plataforma_id == 3) <!--Esto es para que no aparezca con el id de la plataforma si no con el propio nombre-->
-                                        {{"PlayStation 4"}}
-                                    @endif
-                                    @if ($juego->plataforma_id == 4) <!--Esto es para que no aparezca con el id de la plataforma si no con el propio nombre-->
-                                        {{"PlayStation 1"}}
-                                    @endif
+                                    {{$juego->consola->nombre}}
                                 </div>
                                 <div class="form-group mb-2 mb20">
                                     <strong>Nota:</strong>

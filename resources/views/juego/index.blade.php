@@ -51,18 +51,7 @@
 
 										<td >{{ $juego->nombre }}</td>
 										<td >{{ $juego->anho }}</td>
-                                        @if ($juego->plataforma_id == 1) <!--Esto es para que no aparezca con el id de la plataforma si no con el propio nombre-->
-                                        <td>{{"PlayStation 2"}}</td>
-                                    @endif
-                                    @if ($juego->plataforma_id == 2) <!--Esto es para que no aparezca con el id de la plataforma si no con el propio nombre-->
-                                        <td>{{"PlayStation 3"}}</td>
-                                    @endif
-                                    @if ($juego->plataforma_id == 3) <!--Esto es para que no aparezca con el id de la plataforma si no con el propio nombre-->
-                                        <td>{{"PlayStation 4"}}</td>
-                                    @endif
-                                    @if ($juego->plataforma_id == 4) <!--Esto es para que no aparezca con el id de la plataforma si no con el propio nombre-->
-                                        <td>{{"PlayStation 1"}}</td>
-                                    @endif
+                                        <td>{{ $juego->consola->nombre}}</td> <!--Esto es lo que modifique para que aparezca en vez del id el nombre de la consola-->
 										<td >{{ $juego->nota }}</td>
 
                                             <td>
